@@ -5,8 +5,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import ua.ithillel.ui.browser.WebDriverFactory;
 
-import java.time.Duration;
-
 public class BaseTest {
 
     private static final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
@@ -15,11 +13,7 @@ public class BaseTest {
     public void beforeMethod() {
         WebDriver driver = new WebDriverFactory().getDriver();
         setWebDriver(driver);
-
-        getWebDriver().manage().window().maximize();
-        getWebDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
     }
-
 
     @AfterMethod
     public void afterMethod() {

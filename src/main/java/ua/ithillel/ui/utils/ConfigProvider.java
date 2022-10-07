@@ -10,6 +10,9 @@ public final class ConfigProvider {
 
     public static final String BROWSER = prop.getProperty("browser");
     public static final String BASE_URL = prop.getProperty("base.url");
+    public static final int IMPLICITLY_WAIT = Integer.parseInt(prop.getProperty("implicitly.wait"));
+
+    public static final String SELENOID_HUB = prop.getProperty("selenoid.hub");
 
     private ConfigProvider() {
     }
