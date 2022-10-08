@@ -1,5 +1,5 @@
 package ua.ithillel.ui.browser;
 
 public enum Browser {
-    CHROME, FIREFOX
+    CHROME, SELENOID_CHROME, FIREFOX
 }
